@@ -75,11 +75,9 @@ class Contacts
   end
 
   def full_names
-    x = 0
-    @contacts.each do |contacts|
-      @contacts[x] = @contacts[x][:full_name]
-      x += 1
-    end 
+    array = []
+    @contacts.map { |x| array << x[:full_name] }
+    return array
   end
 
   def cities
